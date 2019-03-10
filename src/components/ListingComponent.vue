@@ -8,8 +8,9 @@
         <div class="[ card--information ]"><br />
                     
             <b>Title:</b> {{title}}<br />
-            <b>Version:</b> {{version}}<br />
+            <b>Ingredients:</b> {{ingredients}}<br />
             <b>Href:</b> {{href}}<br />
+           <img :src="thumbnail" style="max-width:100px" /><br /> 
                     
         </div> 
     </div> 
@@ -19,7 +20,7 @@
 <script>
 export default {
     name: 'ListingComponent',
-    props: ['version','title','href','ingredients'],
+    props: ['ingredients','title','href','thumbnail'],
 }
 </script>
 

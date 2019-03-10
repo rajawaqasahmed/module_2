@@ -2,10 +2,17 @@
     <div class="[ row ]">
         <div>Recipes</div>
         <div  class="[ col-sm-8 ]" >
-            <ListingComponent 
-                v-bind:title="recipes.title" 
-                v-bind:version="recipes.version" 
-                v-bind:href="recipes.href"></ListingComponent>
+            
+            <h1>{{recipes.title}}</h1>
+            <h4>Source: ({{recipes.href}})</h4>
+            
+            <ListingComponent v-for="rec in recipes.results" 
+                v-bind:title="rec.title" 
+                v-bind:ingredients="rec.ingredients" 
+                v-bind:href="rec.href"
+                v-bind:thumbnail="rec.thumbnail"
+                ></ListingComponent>
+              
         </div>
     </div>
 </template>
